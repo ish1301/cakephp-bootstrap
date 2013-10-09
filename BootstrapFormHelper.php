@@ -2,7 +2,7 @@
 
 App::uses('FormHelper', 'View/Helper');
 
-Class MyFormHelper extends FormHelper {
+Class BootstrapFormHelper extends FormHelper {
     
     public function create($model = null, $options = array()) {
 		$defaultOptions = array(
@@ -22,6 +22,14 @@ Class MyFormHelper extends FormHelper {
 		return parent::create($model, $options);
 	}
 
+    /**
+     * @todo Implement classes for radio, select and other input types
+     * 
+     * 
+     * @param type $fieldName
+     * @param type $options
+     * @return type
+     */
 	public function input($fieldName, $options = array()) {
         $this->setEntity($fieldName);
         $tmpOptions = $this->_parseOptions($options);
